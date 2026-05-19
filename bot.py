@@ -15,11 +15,11 @@ from datetime import datetime, timezone
 # ─────────────────────────────────────────
 #  KONFIGURASI — isi sesuai kebutuhan
 # ─────────────────────────────────────────
-TELEGRAM_TOKEN   = os.getenv("8806108760:AAF7NJUz1I3unPAMg7v5hSvAlAJ34PYi5G4")
+TELEGRAM_TOKEN   = os.getenv("8919806833:AAHJZdzA0qwsky2862y062MJskK7kLmIG24")
 TELEGRAM_CHAT_ID = os.getenv("6273206309")
 
 SYMBOL      = "GC=F"        # XAUUSD di yfinance (Gold Futures)
-TIMEFRAME   = "1h"          # H1
+TIMEFRAME   = "5m"          # M5
 SWING_LEN   = 5             # pivot length (sama dgn Pine Script default)
 CHECK_EVERY = 300           # cek tiap 5 menit (detik)
 
@@ -67,7 +67,7 @@ def send_telegram(message: str):
 # ─────────────────────────────────────────
 def get_ohlc(symbol: str, interval: str, bars: int = 100) -> pd.DataFrame:
     try:
-        df = yf.download(symbol, period="7d", interval=interval,
+        df = yf.download(symbol, period="1d", interval=interval,
                          progress=False, auto_adjust=True)
         if df.empty:
             log.warning("Data kosong dari yfinance")
