@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 # ─────────────────────────────────────────
 #  KONFIGURASI — isi sesuai kebutuhan
 # ─────────────────────────────────────────
-TELEGRAM_TOKEN   = os.getenv("8919806833:AAHJZdzA0qwsky2862y062MJskK7kLmIG24")
+TELEGRAM_TOKEN   = os.getenv("8806108760:AAF7NJUz1I3unPAMg7v5hSvAlAJ34PYi5G4")
 TELEGRAM_CHAT_ID = os.getenv("6273206309")
 
 SYMBOL      = "GC=F"        # XAUUSD di yfinance (Gold Futures)
